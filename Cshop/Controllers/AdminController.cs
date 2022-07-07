@@ -48,6 +48,7 @@ namespace Cshop.Controllers
             return View(messages);
         }
 
+
         [Authorize(Roles = "Administrator")]
         public async Task<IActionResult> OrderLists()
         {
