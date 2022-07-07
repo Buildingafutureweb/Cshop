@@ -32,10 +32,10 @@ namespace Cshop
             await EnsureTestAdminAsync(userManager, "Abduladmin", "Abduladmin@admin.com", "11111111", AdministratorRole);
             await EnsureTestAdminAsync(userManager, "Anitaadmin", "Anitaadmin@admin.com", "11111111", AdministratorRole);
             await EnsureTestAdminAsync(userManager, "shopowner", "shopowner@shopowner.com", "11111111", ShopOwnerRole);
-            await EnsureTestAdminAsync(userManager, "chineseshopowner", "chineseshopowner@shopowner.com", "11111111", ShopOwnerRole);
-            await EnsureTestAdminAsync(userManager, "indonesianshopowner", "indonesianshopowner@shopowner.com", "11111111", ShopOwnerRole);
-            await EnsureTestAdminAsync(userManager, "indianshopowner", "indianshopowner@shopowner.com", "11111111", ShopOwnerRole);
-            await EnsureTestAdminAsync(userManager, "srilankashopowner", "srilankashopowner@shopowner.com", "11111111", ShopOwnerRole);
+            await EnsureTestAdminAsync(userManager, "warehouseshopowner", "warehouseshopowner@shopowner.com", "11111111", ShopOwnerRole);
+            await EnsureTestAdminAsync(userManager, "countdownshopowner", "countdownshopowner@shopowner.com", "11111111", ShopOwnerRole);
+            await EnsureTestAdminAsync(userManager, "paknsaveshopowner", "paknsaveshopowner@shopowner.com", "11111111", ShopOwnerRole);
+            await EnsureTestAdminAsync(userManager, "newworldshopowner", "newworldshopowner@shopowner.com", "11111111", ShopOwnerRole);
             await EnsureTestAdminAsync(userManager, "user", "user@shop.com", "11111111", CustomerRole);
             await EnsureTestAdminAsync(userManager, "Danuser", "Danuser@shop.com", "11111111", CustomerRole);
             await EnsureTestAdminAsync(userManager, "Clarissauser", "Clarissauser@shop.com", "11111111", CustomerRole);

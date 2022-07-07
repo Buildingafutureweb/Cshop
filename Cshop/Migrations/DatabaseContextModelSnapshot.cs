@@ -210,30 +210,30 @@ namespace Cshop.Migrations
                         {
                             ProductId = 1,
                             CategoryId = 1,
-                            Description = "With 14 wash cycles including Wool and Refresh, which uses steam technology. 4.5-star water rating and 4.5-star energy rating. Specialised UV Protect wash modifier to kill more than 99.99% of bacteria.Eco wash option reduces energy use by up to 44%, and water use by more than 25L per load on a Cotton cycle",
-                            Picture = "/pic/cases/OrientalDragon01.png",
+                            Description = "Fruit and veges that deserve to be tasted, not wasted, the odd bunch have their own unique shapes and looks and therefore each pack will be completely different.",
+                            Picture = "/pic/cases/carrot.jpg",
                             Price = 300m,
-                            ProductName = "Haier Washing Machine",
+                            ProductName = "Fresh Produce The Odd Bunch Carrots",
                             ShopId = 11
                         },
                         new
                         {
                             ProductId = 2,
                             CategoryId = 1,
-                            Description = "No need to BAT-tery an eyelash about the long lasting power of these Alkaline D energy pills!Duracell multi-purpose alkaline batteries are ideal for reliably powering everyday devices that require a kick of additional power. Duracell alkaline batteries are available in size AA, AAA, C, D and 9V. Duralock technology keeps unused Duracell batteries fresh and powered up to 10 years in ambient storage. These batteries give you the freedom to enjoy the use of your appliances by giving you a product you can rely on. Long lasting power guaranteed. Best used when you are looking for reliable, long-lasting power in your every day devices such as motorised toys, flashlights, portable games consoles, remote controls, etc. D size batteries. Also known as MN-1300, MN1300. Pack of 2.",
-                            Picture = "/pic/cases/OrientalDragon02.png",
+                            Description = "Extra sweet and juicy super sweet cobs. A natural source of folate and high in dietary fibre.",
+                            Picture = "/pic/cases/corn.jpg",
                             Price = 12m,
-                            ProductName = "Zhongguo Alkaline Battery",
+                            ProductName = "Wattie's Corn Cobs",
                             ShopId = 11
                         },
                         new
                         {
                             ProductId = 3,
                             CategoryId = 1,
-                            Description = "Pickup trucks are hugely popular, and many models offer more off-road and towing capabilities than most people need. The good news is that the resurgence of smaller trucks makes the body style even more accessible pricewise while maintaining a notable amount of versatility and capability. From entry-level work trucks and heavy-duty haulers to hybrid-powered and high-performance models, these pickups are the very best of the breed.",
-                            Picture = "/pic/cases/OrientalDragon03.png",
-                            Price = 4500m,
-                            ProductName = "Changchen Pickup Truck",
+                            Description = "A bulb of garlic weighs approx. 70gms.The most common varieties of garlic contain 10 cloves (or segments) with white skin. As a rule, the smaller the clove the stronger the taste!.Garlic can be eaten raw or cooked. Raw garlic gives a strong pungent flavour, while cooking gives a more mellow flavour.Garlic burns easily , so take care when frying or sauteing.It can be used in vegetable and meat dishes, soups, dips, stir fries, braises and stews, or add whole unpeeled cloves into a roasting pan with meat or vegetables.",
+                            Picture = "/pic/cases/garlic.jpg",
+                            Price = 5m,
+                            ProductName = "Fresh Produce Garlic",
                             ShopId = 1
                         },
                         new
@@ -742,7 +742,7 @@ namespace Cshop.Migrations
                             CategoryId = 1,
                             Description = "Perfect lounge for land or water use Designed for maximum comfort and hours of relaxation Room for 6 pump not included REQUIRED FOR INLATION Nonstop Outdoor Fun You can use it on land or water, as poolside furniture, on your patio or deck-any location. Maximum Capacity: 6 Built-in inflatable bench seat and cooler 5 heavy-duty handles 8 cup holders Boarding platform Heavy-gauge PVC for years of use Speedy inflation and deflation quick release safety valve Battery pump not included.",
                             Picture = "/pic/cases/Parippu01.png",
-                            Price = 1250000m,
+                            Price = 12m,
                             ProductName = "6-Person Breeze Boat",
                             ShopId = 4
                         },
@@ -752,7 +752,7 @@ namespace Cshop.Migrations
                             CategoryId = 1,
                             Description = "Hailed as the mythical Tarshish, the legendary island of invaluable gemstones, Sri Lanka has been the source of many celebrated gemstones, pearls and luxury jewellery throughout history and has a long association with the international gem and jewellery trade. Today, Sri Lanka is the ninth-largest exporter of precious stones to the global market and one of the five most important gem bearing nations of the world.",
                             Picture = "/pic/cases/Parippu02.png",
-                            Price = 85000m,
+                            Price = 7m,
                             ProductName = "GEMS & JEWELLERY",
                             ShopId = 4
                         },
@@ -861,29 +861,29 @@ namespace Cshop.Migrations
                         new
                         {
                             ShopId = 1,
-                            ShopDesciption = "Welcome to Our Chinese Shop!",
-                            ShopName = "OrientalDragon",
+                            ShopDesciption = "Welcome to Warehouse!",
+                            ShopName = "Warehouse",
                             ShopPicture = "/pic/shops/shop1.jpg"
                         },
                         new
                         {
                             ShopId = 2,
-                            ShopDesciption = "Indonesian Shop is quite good!",
-                            ShopName = "Indomie",
+                            ShopDesciption = "Welcome to Countdown Invercargill store!",
+                            ShopName = "Countdown",
                             ShopPicture = "/pic/shops/shop2.png"
                         },
                         new
                         {
                             ShopId = 3,
-                            ShopDesciption = "Please do more shoping in this Indian Shop!",
-                            ShopName = "TataGroup",
+                            ShopDesciption = "Welcome to Pak n Save Invercargill store!",
+                            ShopName = "PaknSave",
                             ShopPicture = "/pic/shops/shop3.jpg"
                         },
                         new
                         {
                             ShopId = 4,
-                            ShopDesciption = "You can't find a better shop than our Sri Lanka Shop!",
-                            ShopName = "Parippu",
+                            ShopDesciption = "Welcome to New World Invercargill store!!",
+                            ShopName = "New World",
                             ShopPicture = "/pic/shops/shop4.png"
                         });
                 });
