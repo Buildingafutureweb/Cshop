@@ -1,0 +1,30 @@
+﻿@model Cshop.Models.Order
+
+
+<div>
+    <ul>
+
+        <li>@ViewBag.shop.ShopName</li>
+        <li>@Model.ProductName</li>
+        <li>@Model.Price</li>
+        
+
+    </ul>
+    <div class="form-group fs-1 text-center" style="color: rgb(225,102,201);">
+        <label for="quantity">You are so lovely to do business with @ViewBag.shop.ShopName!</label>
+    </div>
+    <br />
+    <div class="form-group fs-1 text-center">
+        <label for="quantity">Quantity:&nbsp;&nbsp;&nbsp;</label><label for="quantity">@ViewBag.Quantity</label>
+    </div>
+    <br />
+    <div class="form-group fs-1 text-center" style="color: rgb(27,167,91);">
+        <label for="quantity">TotalSum:&nbsp;&nbsp;&nbsp;$</label><label for="quantity">@ViewBag.TotalSum</label>
+    </div>
+    <br />
+    <br />
+
+    <div class="fs-5 lh-base"><a asp-controller="Home" asp-action="Index">Back to the Shop</a></div>
+
+
+</div>

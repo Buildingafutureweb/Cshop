@@ -1,0 +1,62 @@
+﻿@model Cshop.Controllers.ShopController.ListModel
+
+@{
+    ViewData["Title"] = "OrderLists Review";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>局部打印案例</title>
+    <script type="text/javascript">
+            function doPrint() {
+                bdhtml=window.document.body.innerHTML;
+                sprnstr="<!--startprint-->";
+                eprnstr="<!--endprint-->";
+                prnhtml=bdhtml.substr(bdhtml.indexOf(sprnstr)+17);
+                prnhtml=prnhtml.substring(0,prnhtml.indexOf(eprnstr));
+                window.document.body.innerHTML=prnhtml;
+                window.print();
+        }
+    </script>
+</head>
+
+<body>
+    <h1>
+        OrderLists
+    </h1>
+    <div id="CartDetail">
+
+        <table class="table table-sm">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Product Name</th>
+                    <th scope="col">Quantity</th>
+                    <th scope="col">Price</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+
+    </div>
+    <div id="total"></div>
+
+    <p>Here are the Orderlists of this Customer!</p>
+    <p>Please Do the Printing!</p>
+    <!--startprint--><!--注意要加上html里star和end的这两个标记-->
+    <!--endprint-->
+    <button type="button" onclick="doPrint()">Please Click Me!</button>
+
+
+</body>
+
+
+
+@section Scripts
+{
+<script src="~/js/cart.js"></script>
+}

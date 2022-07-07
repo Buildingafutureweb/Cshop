@@ -1,0 +1,29 @@
+﻿@model Cshop.Controllers.ShopController.ListModel
+
+
+<div class="shop">
+    <div>@Model.Shop.ShopName</div>
+    <div><img class="img-thumbnail" width="600" height="600" src="@Model.Shop.ShopPicture" /></div>
+    <div>@Model.Shop.ShopDesciption</div>
+
+    <ul>
+  
+            @foreach (var item in Model.Products)
+            {
+                     <li> 
+                         <a href="/Shop/detail/@item.ProductId">
+                         @item.ProductName , $@item.Price, <img class="img-fluid shadow" width="600" height="600" src="@item.Picture" />
+                         </a>
+                         <br/>
+                         <br/>
+                         <br/>
+                         <br/>
+                         <br/>
+                         <br/>
+                     </li>
+            }
+       
+    </ul>
+    
+    
+</div>

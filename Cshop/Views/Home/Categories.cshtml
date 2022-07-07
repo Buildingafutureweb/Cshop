@@ -1,0 +1,16 @@
+﻿@model List<Cshop.Models.Product>
+
+
+<div class="Products">
+    <div class="fs-5">
+    <ul>
+        @foreach (var item in Model) {
+        <li>
+            <a href="/product/@item.ProductId">
+            @Html.DisplayFor(modelItem => item.ProductName), NZ$@Html.DisplayFor(modelItem => item.Price)
+            </a>
+        </li>
+}
+    </ul>
+</div>
+</div>

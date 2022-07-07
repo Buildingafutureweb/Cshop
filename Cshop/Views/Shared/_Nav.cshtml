@@ -1,0 +1,67 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+@using Microsoft.AspNetCore.Identity
+@inject SignInManager<User> SignInManager
+@inject UserManager<User> UserManager
+
+
+
+<header>
+    <nav class="mainnav navbar navbar-expand-sm navbar-toggleable-sm navbar-light">
+        <div class="container">
+            <a class="navbar-brand ms-4 me-5 fs-1" asp-area="" asp-controller="Home" asp-action="Index">Cshop</a>
+
+
+
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse ">
+                    <ul class="navbar-nav ms-auto">
+                        <!--<li class="nav-item">
+                            <a class="nav-link" style="font-size:1rem;" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                        </li>-->
+                        <!--<li class="nav-item">
+                            <a class="nav-link" style="font-size:1rem;" asp-area="" asp-controller="Shop" asp-action="Index" asp-route-id="1">OrientalDragon</a>
+                        </li>-->
+                        <!--<li class="nav-item">
+                            <a class="nav-link" style="font-size:1rem;" asp-area="" asp-controller="Shop" asp-action="Index" asp-route-id="2">Indomie</a>
+                        </li>-->
+                        <!--<li class="nav-item">
+                            <a class="nav-link" style="font-size:1rem;" asp-area="" asp-controller="Shop" asp-action="Index" asp-route-id="3">TataGroup</a>
+                        </li>-->
+                        <!--<li class="nav-item">
+                            <a class="nav-link" style="font-size:1rem;" asp-area="" asp-controller="Shop" asp-action="Index" asp-route-id="4">Parippu</a>
+                        </li>-->
+                        <!--<li class="nav-item">
+                            <a class="nav-link" style="font-size:1rem;" asp-area="" asp-controller="About" asp-action="Index">About</a>
+                        </li>-->
+                        <!--<li class="nav-item">
+                              <a class="nav-link" style="font-size:1rem;" asp-area="" asp-controller="Experiences" asp-action="Index">Experience</a>
+                          </li>-->
+                        <!--<li class="nav-item">
+                            <a class="nav-link" style="font-size:1rem;" asp-area="" asp-controller="Portfolios" asp-action="Index">Portfolio</a>
+                        </li>-->
+                        <!--<li class="nav-item">
+                            <a class="nav-link" style="font-size:1rem;" asp-area="" asp-controller="About" asp-action="Index">About</a>
+                        </li>-->
+                        <!--<li class="nav-item">
+                            <a class="nav-link" style="font-size:1rem;" asp-area="" asp-controller="Contact" asp-action="Index">Contact</a>
+                        </li>-->
+                        <!--<li class="nav-item">
+                            <a class="nav-link" href="https://www.linkedin.com/in/jayliuinvers/" target="_blank"><i class="bi bi-linkedin"></i></a>
+                        </li>-->
+
+
+
+                    </ul>
+                </div>
+        </div>
+    </nav>
+</header>

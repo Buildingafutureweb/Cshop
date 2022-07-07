@@ -1,0 +1,50 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <!-- <Nullable>enable</Nullable> -->
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>3ab83312-f609-4024-b36a-452761ebbcb2</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Views\Myprofile\**" />
+    <Content Remove="Views\Myprofile\**" />
+    <EmbeddedResource Remove="Views\Myprofile\**" />
+    <None Remove="C:\Users\algo\.nuget\packages\microsoft.net.compilers\1.0.0\build\..\tools\**" />
+    <None Remove="Views\Myprofile\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Bogus" Version="34.0.2" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="6.0.5" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="6.0.5" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.5" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="6.0.5" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.5">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.14.0" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.5" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.3.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Areas\Admin\Data\" />
+    <Folder Include="Areas\Admin\Models\" />
+    <Folder Include="db\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Views\Admin\Messages.cshtml" />
+    <None Include="Views\Cart\Index.cshtml" />
+    <None Include="Views\Product\Index.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\PagedList\PagedList.csproj" />
+  </ItemGroup>
+
+</Project>

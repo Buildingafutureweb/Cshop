@@ -1,0 +1,37 @@
+﻿@using Microsoft.AspNetCore.Identity
+@using Cshop.Models
+
+
+@inject SignInManager<User> SignInManager
+@inject UserManager<User> UserManager
+
+
+<!---->
+
+<ul class="navbar-nav login">
+@if (SignInManager.IsSignedIn(User))
+{
+    <li class="nav-item pe-3">
+        <a class="nav-link" href="/myprofile" >Hi @User.Identity?.Name</a>
+    </li>
+    <li class="nav-item pe-3">
+        <form  class="form-inline" action="/logout">
+            <button  type="submit" class="nav-link btn btn-link">Sign Out</button>
+        </form>
+    </li>
+}
+else
+{
+    <li class="nav-item pe-3">
+        <!--<a class="nav-link"  asp-route="/Register">Register</a>-->
+        <a class="nav-link"  href="/Register">Register</a>
+    </li>
+    <li class="nav-item pe-3">
+       <!--<a class="nav-link" href="/Login">Sign In</a>-->
+        <!--<a class="nav-link" asp-route="home/login">Sign In</a>-->
+         <!--<a class="nav-link" asp-controller="Login">Sign In</a>-->
+         <a class="nav-link" href="/login">Sign In</a>
+    </li>
+}
+</ul>
+

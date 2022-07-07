@@ -1,0 +1,38 @@
+﻿import { data } from "jquery";
+
+@model Cshop.Models.Product
+
+
+<div>
+    <div class="text-center"><img class="img-fluid shadow" src="@Model.Picture" /></div>
+    <ul>
+
+        <li>@ViewBag.shop.ShopName</li>
+        <li>@Model.ProductName</li>
+        <li>@Model.Price</li>
+        <li>@Model.Description</li>
+
+
+    </ul>
+    <form asp-controller="Shop" asp-route-id="@(Model.ProductId)" asp-action="Order">
+        <div class="form-group">
+            <label for="quantity">Quantity:</label>
+            <input type="number" id="quantity" name="quantity" value="1" onchange="myFunctiontwo()">
+
+        </div>
+        <div class="form-group">
+            <!--<input type="submit" value="Order" class="btn btn-primary" />-->
+            <button class="btn btn-primary" id="addtocart" data-product-id="@Model.ProductId" data-product-name="@Model.ProductName" data-price="@Model.Price" data-quantity="1">ADD TO CART</button>
+            <script>
+                function myFunctiontwo(){
+                    document.getElementById("addtocart").dataset.quantity = document.getElementById("quantity").value;
+                    //alert(document.getElementById("addtocart").dataset.quantity);
+                }
+            </script>
+        </div>
+    </form>
+    <br />
+    <br />
+    <div class="fs-5 lh-base"><a asp-controller="Home" asp-action="Index">Back to the Shop</a></div>
+
+</div>

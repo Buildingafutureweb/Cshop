@@ -1,0 +1,131 @@
+﻿@using Microsoft.AspNetCore.Identity
+@using Cshop.Models
+
+@inject SignInManager<User> SignInManager
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Cshop</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/Starter.styles.css" asp-append-version="true" />
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark border-bottom mb-3">
+            <div class="container-fluid">
+
+
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+
+                        <li class="nav-item text-center">
+                            <a class="nav-link text-light" asp-controller="Home" asp-action="Index">Home</a>
+                        </li>
+                        <li class="nav-item text-center">
+                            <a class="nav-link" style="font-size:1rem;" asp-area="" asp-controller="Shop" asp-action="Index" asp-route-id="1">OrientalDragon</a>
+                        </li>
+                        <li class="nav-item text-center">
+                            <a class="nav-link" style="font-size:1rem;" asp-area="" asp-controller="Shop" asp-action="Index" asp-route-id="2">Indomie</a>
+                        </li>
+                        <li class="nav-item text-center">
+                            <a class="nav-link" style="font-size:1rem;" asp-area="" asp-controller="Shop" asp-action="Index" asp-route-id="3">TataGroup</a>
+                        </li>
+                        <li class="nav-item text-center">
+                            <a class="nav-link" style="font-size:1rem;" asp-area="" asp-controller="Shop" asp-action="Index" asp-route-id="4">Parippu</a>
+                        </li>
+                        <li class="nav-item text-center">
+                            <a class="nav-link" style="font-size:1rem;" asp-area="" asp-controller="About" asp-action="Index">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" style="font-size:1rem;" asp-area="" asp-controller="Contact" asp-action="Index">Contact</a>
+                        </li>
+                    </ul>
+
+
+
+                    @if (SignInManager.IsSignedIn(User))
+                    {
+                        <a class="my-2 my-sm-0 text-light me-4" href="/myprofile" >Hi @User.Identity?.Name</a>
+                        if(User.IsInRole("Administrator")){
+                            <a class="my-2 my-sm-0 text-light me-4" href="/Admin" >Admin Panel</a>
+                        }
+                        else{
+                            <a class="my-2 my-sm-0 text-light me-4" href="/logout" >Log out</a>
+                        }
+                    }
+                    else
+                    {
+                         <a class="my-2 my-sm-0 text-light me-4" href="/register">Sign up</a>
+                         <a class="my-2 my-sm-0 text-light me-4" href="/login">Sign in</a>
+                    }
+
+                    <div class="dropdown">
+                        <button class="dropdown-toggle" id="dropdownMenuButton" data-bs-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Cart(0)</button>
+                        <div style="width:300px" class="dropdown-menu dropdown-menu-end shadow rounded ps-2 pe-2" aria-labelledby="dropdownMenuButton">
+
+                            <table id="cart" class="table table-sm">
+                                <thead>
+                                    <tr>
+                                 
+                                        <th scope="col">Product Name</th>
+                                        <th scope="col">Quantity</th>
+                                        <th scope="col">Price</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                </tbody>
+                            </table>
+                            <div class="text-end mb-2">
+                                <a type="submit" class="btn btn-primary" href="/cart">View Cart</a>
+                            </div>
+                            
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </nav>
+    </header>
+
+
+    <partial name="_Nav">
+    </partial>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+
+
+    <div class="toast-container position-fixed top-50 start-50 translate-middle p-5">
+        <div id="cartToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header">
+
+                <strong class="me-auto">Message</strong>
+
+                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body">
+            </div>
+        </div>
+    </div>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
+

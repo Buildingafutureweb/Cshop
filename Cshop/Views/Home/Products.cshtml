@@ -1,0 +1,21 @@
+﻿@model IEnumerable<Cshop.Models.Product>
+
+@foreach (var item in Model) {
+        <div>
+            <div>
+                @Html.DisplayFor(modelItem => item.ProductName)
+            </div>
+            <div>
+                @Html.DisplayFor(modelItem => item.Price)
+            </div>
+            <div>
+                @Html.DisplayFor(modelItem => item.Sn)
+            </div>
+
+            <div>
+                @Html.DisplayFor(modelItem => item.CategoryId)
+            </div>
+            
+        </div>
+        <hr />
+}
